@@ -5,7 +5,7 @@ def count_words(text: str):
     for word in text_splitted:
         word_count +=1 
 
-    return f'{word_count} words found in the document'
+    return f'Found {word_count} total words'
 
 def count_char(text: str):
     text = text.lower()
@@ -21,4 +21,5 @@ def count_char(text: str):
     
     return chars_dict
 
-# def print_report(char_list: list):
+def sort_list(dict_to_sort):
+    return dict(sorted(dict_to_sort.items(), key=lambda item: item[1], reverse=True))
